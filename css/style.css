@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb{
 
 header{
     width: 100%;
-    height: 500px;
+    height: 580px;
     /* background: #bc4e9c;   */
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, rgba(168, 89, 9, 0.61), hsl(30, 100%, 51%, 0.5)), url(../img/header/main2.jpeg);  
@@ -84,23 +84,25 @@ header .textos-header{
 }
 
 .verMas{
-    width: 200px;
-    height: 70px;
+    width: 175px;
+    height: 60px;
     background-color: #FF8303;
-    justify-content: center;
+    text-align: center;
     margin-top: 50px;
     border-radius: 30px;
+    color: white;
 }
 
 .verMas p{
-    padding: 25px;
-    /* text-decoration: none; */
-    /* background-color: red;  */
+    font-size: 20px;
+    padding: 15px;
+    text-decoration: none; 
+    /* background-color: red;  
     /* margin: 10px; */
 }
 /* Nav */
 
-nav{
+nav:not(.icon){
     width: 100%;
     height: 60px;
     background-color: #F0E3CA;
@@ -126,32 +128,45 @@ nav > a:hover{
 /* Wave */
 
 .wave{
-    position: absolute;
+    /*position: absolute;*/
+    margin-top: 30px;
     bottom: 0;
     width: 100%;
+    /* fallback for old browsers */
+    /*fill: -webkit-linear-gradient(to right, rgba(252, 250, 228), rgb(248, 246, 222));  */
+    /* Chrome 10-25, Safari 5.1-6 */ ;
+    /*fill: linear-gradient(to right, rgba(252, 250, 228), rgb(248, 246, 222)); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* SN */
 
 #SN{
-    border-top: 7px solid #1B1A17;
+    /*border-top: 7px solid #1B1A17;*/
+    /*margin-top: 80px;*/
+    /*background-color: #F0E3CA;*/
+    background: #F6F2EA;
 }
 
 /* About us */
 .sobre-nosotros h2{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 30px;
+    /*background-color: #F0E3CA;*/
+    background: #F6F2EA;
 }
 
 .contenedor-sobre-nosotros{
     display: flex;
     justify-content: space-evenly;
+    /*margin-top: 500px;*/
 }
 
 .contenedor-sobre-nosotros img{
     /* padding-top: 10px; */
     /* background-color:rgb(156, 155, 155); */
-    height: 500px;
+    height: 350px;
+    margin: 30px 0px;
 }
 
 .imagen-about-us{
@@ -160,6 +175,7 @@ nav > a:hover{
 
 .sobre-nosotros .contenido-textos{
     width: 48%;
+    margin-top: 30px;
 }
 
 .contenido-textos h3{
@@ -185,7 +201,7 @@ nav > a:hover{
 }
 
 .contenidos-textos p{
-    padding: 0px 0xp 30px 15px;
+    padding: 0px 0px 30px 15px;
     font-weight: 300;
     text-align: justify;
 }
@@ -193,7 +209,7 @@ nav > a:hover{
 /* Portafolio */
 
 .portafolio, .about-services{
-    background-color: #f2f2f2;
+    background-color: #F0E3CA;
 }
 
 .galeria-port{
@@ -225,7 +241,8 @@ nav > a:hover{
     height: 100%;
     top: 0;
     transform: scale(0);
-    background-color: hsla(177, 99%, 60%, 0.5);
+    /*background-color: hsla(177, 99%, 60%, 0.5);*/
+    background-color: rgba(255, 131, 3, 0.6);    
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -246,7 +263,8 @@ nav > a:hover{
 }
 
 .portafolio h2, .t-servicios{
-    color: #ffdc40;
+    /*color: #A35709;*/
+    color: white;
 }
 /* Clientes */
 
@@ -260,7 +278,7 @@ nav > a:hover{
 }
 
 .cards .card{
-    background-color: rgb(44, 204, 236);
+    background-color: rgb(255, 161, 33);
     display: flex;
     width: 46%;
     height: 200px;
