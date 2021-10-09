@@ -102,13 +102,19 @@ header .textos-header{
 }
 /* Nav */
 
-nav:not(.icon){
+nav{
+
     width: 100%;
-    height: 60px;
+    height: 70px;
+    /* width: 100%;
+    height: 60px; */
     background-color: #F0E3CA;
     display: flex;
-    justify-items: flex-end;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+}
+
+nav a:nth-child(2){
+    margin-left: 32%;
 }
 
 nav a{
@@ -120,10 +126,38 @@ nav a{
     transition: .15s;
 }
 
-nav > a:hover{
+nav a:nth-child(3){
+    /* background: yellow; */
+    width: 130px;
+}
+
+nav > a:hover:not(.icon){
     border-bottom: 5px solid #ffcd69;
     color: #FF8303;
 }
+
+.opciones{
+    padding-top: 25px;
+}
+
+.icon img{
+
+    padding-top: 5px;
+}
+/* Icon Nav */
+
+.icon{
+    padding: 8px;
+    margin: 0;
+    margin-left: 2%;
+}
+
+.icon img{
+    width: 60px;
+    height: 50px;
+}
+
+/* Fin del Icon Nav */
 
 /* Wave */
 
@@ -150,7 +184,7 @@ nav > a:hover{
 
 /* About us */
 .sobre-nosotros h2{
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 30px;
     /*background-color: #F0E3CA;*/
     background: #F6F2EA;
@@ -197,7 +231,7 @@ nav > a:hover{
 }
 
 .contenido-textos h3{
-    color:  hsla(230, 38%, 31%, 0.781);
+    color:  #FF8303;
 }
 
 .contenidos-textos p{
@@ -208,7 +242,7 @@ nav > a:hover{
 
 /* Portafolio */
 
-.portafolio, .about-services{
+.portafolio, .more-information{
     background-color: #F0E3CA;
 }
 
@@ -278,7 +312,7 @@ nav > a:hover{
 }
 
 .cards .card{
-    background-color: rgb(255, 161, 33);
+    background-color: #ff9225;
     display: flex;
     width: 46%;
     height: 200px;
@@ -309,7 +343,7 @@ nav > a:hover{
 
 /* our team  */
 
-.about-services{
+.more-information{
     padding: 60px 60px;
     padding-bottom: 100px;
 }
@@ -338,22 +372,23 @@ nav > a:hover{
 
 .servicio-ind p{
     font-weight: 300;
-    text-align: justify;
+    text-align: center;
 }
 
 /* Footer */
 
 footer{
-    background-color: #414141;
+    background-color: #1B1A17;
     padding: 53px 0 30px 0;
     margin: auto;
     overflow: hidden;
-    border-top: 7px solid rgba(255, 255, 255, 0.32);
+    border-top: 7px solid rgba(255, 255, 255, 0.164);
 }
 
 footer a{
     text-decoration: none;
 }
+
 .contenedor-footer{
     display: flex;
     width: 90%;
@@ -369,7 +404,7 @@ footer a{
 
 .content-foo h4{
     color: #fff;
-    border-bottom: 3px solid rgb(119, 197, 212);
+    border-bottom: 3px solid #FF8303;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -381,9 +416,9 @@ footer a{
 .titulo-final{
     text-decoration: none;
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     margin: 20px 0 0 0;
-    color: #9e9797;
+    color: #ffffff;
 }
 
 .referencias{
