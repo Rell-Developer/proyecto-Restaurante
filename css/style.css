@@ -366,7 +366,8 @@ nav > a:hover:not(.icon){
 }
 
 .hover-galeria img{
-    width: 60px;
+    width: 37%;
+    /* width: 75px; */
 }
 
 .hover-galeria p{

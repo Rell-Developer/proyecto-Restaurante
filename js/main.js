@@ -1,53 +1,13 @@
 // Variables
 const iconoMenu = document.querySelector('#icono-menu'),
-    menu = document.querySelector('#menu'),
-    cuerpo = document.querySelector('.body');
+    menu = document.querySelector('#menu');
 
 let cerrar = document.querySelectorAll(".close")[0];
 let abrir = document.querySelectorAll(".cta")[0];
 let modal = document.querySelectorAll(".modal")[0];
 let modalC = document.querySelectorAll(".modal-container")[0];
 
-// // EventListeners
-// iconoMenu.addEventListener('click', e => {
-
-
-//     console.log(e.target);
-
-//     // Obtenemos la imagen con la direccion puesta
-//     const rutaActual = e.target.getAttribute('src');
-
-//     // Intercambio de las imagenes
-//     if(rutaActual == 'img/icons/open-menu.png'){
-
-//         // Hacemos aparecer el menu
-//         menu.style.display = 'block';
-
-//         // Animacion de izquierda
-//         setTimeout( () => {
-            
-//             menu.style.transform = 'translate(0px)';      
-
-//             // Hacemos el cambio de la imagen del menu
-//             e.target.setAttribute('src', 'img/icons/open-menu2.png');
-
-//         }, 0);
-//     }
-//     else{
-
-//         // Cambio de imagen
-//         e.target.setAttribute('src', 'img/icons/open-menu.png');
-
-//         // Movimiento del menu
-//         menu.style.transform = 'translate(600px)';
-
-//         // Ocultar menu
-//         setTimeout( () => {
-//             menu.style.display = 'none';
-//         }, 250);
-//     }
-// });
-
+// EventListeners
 eventListeners();
 
 // console.log(document.querySelectorAll(".cta").item());
@@ -56,9 +16,8 @@ function eventListeners(){
 
     //Para abrir el menu
     window.addEventListener('click', function(e) {
-        
-        e.preventDefault();
 
+        //Verificando a donde le dio click
         if(e.target == modalC){
 
             modal.classList.toggle('modal-close');
@@ -75,12 +34,21 @@ function eventListeners(){
         // Recorrida y condicional para las tarjetas del menu
         for(let i = 1; i <= 8; i++){
 
-            if((e.target == document.querySelector(`.cta${i}`)) || (e.target == document.querySelector(`.hand${i}`))){
+            if((e.target == document.querySelector(`.cta${i}`)) || e.target == document.querySelector(`.text-Op1`) || (e.target == document.querySelector(`.hand${i}`))){
 
                 let img;
                 
+                //Transformacion 
+                if(e.target == document.querySelector(`.text-Op1`)){
+
+                    console.log(`Es la opcion #${i}`);
+                    console.log(document.querySelector(`.cta${i} p`))
+                }
+
+                console.log(document.querySelector(`.cta${i} p b`))
+
                 // Verificacion de target
-                if(e.target == document.querySelector(`.hand${i}`)){
+                if(e.target == document.querySelector(`.hand${i}`) || e.target == document.querySelector(`.cta${i} p`)){
 
                     img = e.target.parentElement.parentElement.children[0].src;
                 }
@@ -151,8 +119,44 @@ function eventListeners(){
             modalC.style.visibility = "hidden";
         }, 500);
     });
-}
 
+    //Boton de Despliegue del menu
+    iconoMenu.addEventListener('click', e => {
+
+    // Obtenemos la imagen con la direccion puesta
+    const rutaActual = e.target.getAttribute('src');
+
+    // Intercambio de las imagenes
+    if(rutaActual == 'img/icons/open-menu.png'){
+
+        // Hacemos aparecer el menu
+        menu.style.display = 'block';
+
+        // Animacion de izquierda
+        setTimeout( () => {
+            
+            menu.style.transform = 'translate(0px)';      
+
+            // Hacemos el cambio de la imagen del menu
+            e.target.setAttribute('src', 'img/icons/open-menu2.png');
+
+        }, 0);
+    }
+    else{
+
+        // Cambio de imagen
+        e.target.setAttribute('src', 'img/icons/open-menu.png');
+
+        // Movimiento del menu
+        menu.style.transform = 'translate(600px)';
+
+        // Ocultar menu
+        setTimeout( () => {
+            menu.style.display = 'none';
+        }, 250);
+    }
+    });
+}
 
 function myFunction(e) {
 
