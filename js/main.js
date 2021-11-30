@@ -34,6 +34,7 @@ function eventListeners(){
         // Recorrida y condicional para las tarjetas del menu
         for(let i = 1; i <= 8; i++){
 
+            // Validacion del elemento seleccionado en el menu
             if((e.target == document.querySelector(`.cta${i}`)) || e.target == document.querySelector(`.text-Op1`) || (e.target == document.querySelector(`.hand${i}`))){
 
                 let img;
@@ -44,8 +45,6 @@ function eventListeners(){
                     console.log(`Es la opcion #${i}`);
                     console.log(document.querySelector(`.cta${i} p`))
                 }
-
-                console.log(document.querySelector(`.cta${i} p b`))
 
                 // Verificacion de target
                 if(e.target == document.querySelector(`.hand${i}`) || e.target == document.querySelector(`.cta${i} p`)){
@@ -103,6 +102,13 @@ function eventListeners(){
         
                 document.querySelector('.modal-container img').style.transform = 'translateY(0%)';
             }
+
+            // Validacion del elemento seleccionado en el nav desplegable en el diseño responsivo
+            if(e.target == document.querySelector(`.op${i}`)){
+
+                // Ocultar Menu lateral en el diseño responsivo
+                OcultarMenu();
+            }
         }
     });
 
@@ -143,17 +149,8 @@ function eventListeners(){
         }, 0);
     }
     else{
-
-        // Cambio de imagen
-        e.target.setAttribute('src', 'img/icons/open-menu.png');
-
-        // Movimiento del menu
-        menu.style.transform = 'translate(600px)';
-
-        // Ocultar menu
-        setTimeout( () => {
-            menu.style.display = 'none';
-        }, 250);
+        // Metodo para ocultar el menu lateral responsivo
+        OcultarMenu();
     }
     });
 }
@@ -174,4 +171,18 @@ function creacionModel(etiqueta, imagen, titulo, descripcion, precio){
     etiqueta.children[1].children[1].children[0].textContent = titulo;      //Titulo
     etiqueta.children[1].children[1].children[1].textContent = descripcion; //Descripcion
     etiqueta.children[1].children[1].children[2].textContent = precio;      //Precio
+}
+
+function OcultarMenu() {
+    
+    // Cambio de imagen
+    iconoMenu.setAttribute('src', 'img/icons/open-menu.png');
+
+    // Movimiento del menu
+    menu.style.transform = 'translate(600px)';
+
+    // Ocultar menu
+    setTimeout( () => {
+        menu.style.display = 'none';
+    }, 250);
 }

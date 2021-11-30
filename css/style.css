@@ -646,7 +646,6 @@ footer a{
     }
 
     .contenido-textos h3{
-        /* padding-bottom: 70px; */
         margin-top: 10px;
     }
 
@@ -686,7 +685,7 @@ footer a{
     }
 
     .servicio-ind{
-        width: 100%;
+        width: 90%;
         text-align: center;
     }
 
@@ -710,9 +709,24 @@ footer a{
     .opciones{
         display: none;
     }
+
+    /* Model del menu */
+    .modal-container{
+        flex-direction: column;
+    }
+
+    .modal-container .modal{
+        width: 70%;
+        height: 35vh;
+    }
+
+    .modal-container img{
+        width: 70%;
+        height: 30vh;
+    } 
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:540px){
 
     /* Menu oculto */
     .cont-menu ul a{
@@ -804,18 +818,40 @@ footer a{
     .content-foo:nth-child(1), .content-foo:nth-child(2){
         margin-bottom: 50px;
     }
-}
 
-/* ANIMACIONES - KEYFRAMES */
-/* 
-@keyframes mover-izquierda-derecha{
-    0%{
-        transform: translate(-90%);
+    /* Modal del menu */
+    .modal-container .modal-textos h3{
+        font-size: 4vh;
+    }
+
+    .modal-container .modal-textos p{
+        font-size: 2.5vh;
     }
 }
 
-@keyframes mover-derecha-izquierda{
-    0%{
-        transform: translate(90%);
+/* Diseño exclusivo para Ipad Pro */
+@media screen and (min-height: 1366px){
+    
+    /* Modal del menu */
+    .modal-container{
+        flex-direction: column;
     }
-} */
+
+    .modal-container .modal-textos h3{
+        font-size: 4vh;
+    }
+
+    .modal-container .modal-textos p{
+        font-size: 2.5vh;
+    }
+
+    .modal-container .modal{
+        width: 70%;
+        height: 35vh;
+    }
+
+    .modal-container img{
+        width: 70%;
+        height: 30vh;
+    } 
+}
