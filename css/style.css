@@ -199,7 +199,7 @@ nav > a:hover:not(.icon){
 .cont-menu{
     background-color: #1B1A17;
     box-shadow: 2px 0px 5px 2px solid rgb(66, 66, 66);
-    width: 32%;
+    width: 50%;
     height: 100vh;
     position: absolute;
     top: 0;
@@ -210,7 +210,8 @@ nav > a:hover:not(.icon){
 /* Estilos para el listado del menu */
 
 .cont-menu ul{
-    padding: 100px 0px 20px 0px;
+    padding: 100px 0px 0px 0px;
+    text-align: left;
 }
 
 .cont-menu ul a{

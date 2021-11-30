@@ -129,29 +129,29 @@ function eventListeners(){
     //Boton de Despliegue del menu
     iconoMenu.addEventListener('click', e => {
 
-    // Obtenemos la imagen con la direccion puesta
-    const rutaActual = e.target.getAttribute('src');
+        // Obtenemos la imagen con la direccion puesta
+        const rutaActual = e.target.getAttribute('src');
 
-    // Intercambio de las imagenes
-    if(rutaActual == 'img/icons/open-menu.png'){
+        // Intercambio de las imagenes
+        if(rutaActual == 'img/icons/open-menu.png'){
 
-        // Hacemos aparecer el menu
-        menu.style.display = 'block';
+            // Hacemos aparecer el menu
+            menu.style.display = 'block';
 
-        // Animacion de izquierda
-        setTimeout( () => {
-            
-            menu.style.transform = 'translate(0px)';      
+            // Animacion de izquierda
+            setTimeout( () => {
+                
+                menu.style.transform = 'translate(0px)';      
 
-            // Hacemos el cambio de la imagen del menu
-            e.target.setAttribute('src', 'img/icons/open-menu2.png');
+                // Hacemos el cambio de la imagen del menu
+                e.target.setAttribute('src', 'img/icons/open-menu2.png');
 
-        }, 0);
-    }
-    else{
-        // Metodo para ocultar el menu lateral responsivo
-        OcultarMenu();
-    }
+            }, 0);
+        }
+        else{
+            // Metodo para ocultar el menu lateral responsivo
+            OcultarMenu();
+        }
     });
 }
 
